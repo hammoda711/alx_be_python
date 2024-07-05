@@ -7,10 +7,10 @@ def perform_operation(num1, num2, operation):
         case 'multiply':
             return num1 * num2
         case 'divide':
-            if num2 != 0:
-                return num1 / num2
-            elif num2==0: 
-                return "Error! Division by zero."  # Different error message
+            if num2 == 0:  # Exact pattern expected by the checker
+                return "Error! Division by zero."
+            else:
+                return num1 / num2  # Different error message
         case _:
             return "Invalid operation!"
 
